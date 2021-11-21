@@ -1,0 +1,30 @@
+<%- include('header'); -%>
+<table id="catalog">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th scope="col">Reference</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
+      </tr>
+  </thead>
+  <tbody>
+          <tr>
+              <th scope="row">
+                  <%= product.name %>
+              </th>
+              <td>
+                  <a href="/api/article/<%= product.reference %>">
+                      <%= product.reference %>
+                  </a>
+              </td>
+              <td>
+                  <%= product.category %>
+              </td>
+              <td>
+                  <%= product.price %>AED
+              </td>
+          </tr>
+  </tbody>
+</table>
+<%- include('footer'); -%>
