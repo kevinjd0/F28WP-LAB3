@@ -2,6 +2,8 @@
 
 [Click here to access the Webstore](https://0itsb.sse.codesandbox.io/)
 
+[Webstore Backend](https://codesandbox.io/s/github/kevinjd0/F28WP-LAB3) - If the webpage crashes, restart the server in codesandbox from the server control panel 
+
 ## This Lab consists of creating a webstore using node.js. By developing basic functionalities of an online shopping application where products and clients are stored in a MySQL database.
 >
 >This lab deals with server-side programming where express module is used to deliver dynamic web pages.
