@@ -1,11 +1,12 @@
 const express = require("express");
+const session = require("express-session");
 //creating app
 const app = express();
 //send an HTTP response when receiving HTTP GET /
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.get("/", (req, res) => {
-  res.render("index"); //no need for ejs extension
+  res.render("index");
 });
 //route for contacts
 app.get("/contacts", (req, res) => {
@@ -15,6 +16,21 @@ app.get("/contacts", (req, res) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 //pass requests to the router middleware
 const router = require("./routes/apis");
 app.use(router);
