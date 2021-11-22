@@ -1,0 +1,36 @@
+<%- include('header'); -%>
+<div class="content">
+  <h1>List of clients</h1>
+  <table id="catalog">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th scope="col">Society</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Address</th>
+        <th scope="col">Zip Code</th>
+        <th scope="col">City</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Fax</th>
+        <th scope="col">Max Outstanding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% user.forEach(users => { %>
+      <tr>
+        <th scope="row"><%= users.num_client %></th>
+        <td><%= users.society %></td>
+        <td><%= users.contact %></td>
+        <td><%= users.addres %></td>
+        <td><%= users.zipcode %></td>
+        <td><%= users.city %></td>
+        <td><%= users.phone %></td>
+        <td><%= users.fax %></td>
+        <td><%= users.max_outstanding %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<br />
+<%- include('footer'); -%>

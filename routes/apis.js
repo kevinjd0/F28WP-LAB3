@@ -11,6 +11,8 @@ const router = express.Router();
 router.post("/api/register", clientController.registerControl);
 //route for login
 router.post("/api/login", clientController.loginControl);
+//route for client
+router.get("/api/clients", clientController.getClient);
 //route for listing all products
 router.get("/api/catalog", productController.getCatalogue);
 router.get("/api/article/:id", productController.getProductByID);
