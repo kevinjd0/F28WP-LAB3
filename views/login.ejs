@@ -1,12 +1,14 @@
 <%- include('header'); -%>
 <div class="content">
   <form action="/api/login" method="post">
-    Username: <input type="text" name="username" id="username" /> Password:
+    <h2>Username</h2> 
+    <input type="text" name="username" id="username" /><br><br> 
+    <h2>Password</h2>
     <input type="password" id="password" name="password" />
-    <button>Sign-in</button>
+    <br><button>Sign-in</button>
   </form>
   <form action="/register">
-    <button>Register</button>
+    <br><button>Register</button>
   </form>
 </div>
 <%- include('footer'); -%>
